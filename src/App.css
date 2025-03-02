@@ -1,0 +1,425 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.home-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.search-form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search-input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  min-width: 200px;
+}
+
+.search-button {
+  padding: 8px 16px;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-button:hover {
+  background-color: #535bf2;
+}
+
+.error-message {
+  color: #ff4444;
+  margin: 10px 0;
+}
+
+.stock-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.stock-wrapper {
+  position: relative;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.2s;
+}
+
+.stock-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+.remove-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 8px;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.remove-button:hover {
+  background-color: #ff2222;
+}
+
+.stock-card {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  text-align: left;
+}
+
+.stock-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.stock-symbol {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.stock-price {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.stock-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.stock-change {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.stock-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.stock-info-grid div {
+  display: flex;
+  flex-direction: column;
+}
+
+.stock-info-grid label {
+  font-size: 0.9em;
+  color: #888;
+}
+
+.stock-position {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.transaction-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.transaction-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #2a2a2a;
+  color: white;
+  width: 100px;
+}
+
+.transaction-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.buy-button, .sell-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  flex: 1;
+}
+
+.buy-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.buy-button:hover {
+  background-color: #45a049;
+}
+
+.sell-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.sell-button:hover {
+  background-color: #da190b;
+}
+
+.sell-button:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+}
+
+.last-updated {
+  color: #888;
+  font-size: 0.8em;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.portfolio-summary {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.portfolio-summary h2 {
+  margin: 0 0 20px 0;
+  color: #fff;
+}
+
+.portfolio-summary h3 {
+  margin: 20px 0 15px 0;
+  color: #fff;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.summary-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.summary-item label {
+  display: block;
+  font-size: 0.9em;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.summary-item .value {
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.summary-item.total {
+  background-color: rgba(100, 108, 255, 0.2);
+}
+
+.holdings-section {
+  margin-top: 20px;
+}
+
+.no-holdings {
+  color: #888;
+  font-style: italic;
+}
+
+.holdings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.holding-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.holding-item .symbol {
+  font-weight: bold;
+  color: #646cff;
+}
+
+.holding-item .quantity {
+  color: #888;
+}
+
+.holding-item .value {
+  font-weight: 500;
+}
+
+.market-controls {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.market-status {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.market-status h3 {
+  margin: 0 0 10px 0;
+  color: #fff;
+}
+
+.current-date {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #fff;
+}
+
+.market-state {
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.market-state.open {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+}
+
+.market-state.closed {
+  background-color: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+}
+
+.simulation-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.control-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2a2a2a;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s;
+}
+
+.control-button:hover {
+  background-color: #3a3a3a;
+}
+
+.speed-controls {
+  text-align: center;
+}
+
+.speed-controls label {
+  display: block;
+  margin-bottom: 10px;
+  color: #888;
+}
+
+.speed-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.speed-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2a2a2a;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: all 0.2s;
+}
+
+.speed-button:hover {
+  background-color: #3a3a3a;
+}
+
+.speed-button.active {
+  background-color: #646cff;
+  font-weight: bold;
+}
